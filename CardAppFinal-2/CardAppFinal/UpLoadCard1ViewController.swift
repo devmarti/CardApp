@@ -3,67 +3,42 @@
 //  CardAppFinal
 //
 //  Created by APPS2T on 7/2/22.
-//
+
 
 import UIKit
 
-class UpCard1ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class UpLoadCard1ViewController: UIViewController {
     
-    
-    @IBOutlet weak var imagenLogo: UIImageView!
-    
-    @IBOutlet weak var brandsName: UIPickerView!
-    
-    
+    @IBOutlet weak var imagenLogoUp: UIImageView!
+    @IBOutlet weak var nameSegmentedControllerUp: UISegmentedControl!
+    @IBOutlet weak var sellCardButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        brandsName.delegate = self
-        brandsName.dataSource = self
+        
+        nameSegmentedControllerUp.apportionsSegmentWidthsByContent.description
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return brands.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return brands[row].name
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        imagenLogo.image = UIImage(named: brands[row].logo)
-     
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: brands[row].name, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
-            return attributedString
+    @IBAction func segementedControlchangedUp( sender: UISegmentedControl){
+        
+        switch  nameSegmentedControllerUp.selectedSegmentIndex {
+        case 0:
+            imagenLogoUp.image = UIImage(named: "Pokémon.svg")
+        case 1:
+            imagenLogoUp.image = UIImage(named: "Magic-logo.svg")
+        case 3:
+            imagenLogoUp.image = UIImage(named: "yu-gi-oh!.png")
+        default:
+            imagenLogoUp.image = nil
         }
-    
-    struct Brand{
-        var name: String
-        var logo: String
     }
-    
-    let brands: [Brand] = [
-        Brand(name: "Magic", logo: "Magic-logo.svg"),
-        Brand(name: "Pokémon", logo: "Pokémon.svg"),
-        Brand(name: "Yu-gi-oh!", logo: "yu-gi-oh!.png")
-    ]
-    
-  
-    @IBAction func VenderCartaButton(_ sender: Any) {
-       /* let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let controller = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let navigation = UINavigationController(rootViewController: controller)
-        self.view.addSubview(navigation.view)
-        self.addChild(navigation)
-        navigation.didMove(toParent: self)
- */
+    @IBAction func sellCardButton(_ sender: Any) {
+        if let navCon = storyboard?.instantiateViewController(identifier: "ProfileIdentifier") as? PerfilViewController{
+            
+            navCon.modalPresentationStyle = .currentContext
+            navCon.modalTransitionStyle = .crossDissolve
+            
+            present(navCon, animated: true, completion: nil)
+        }
     }
 }
