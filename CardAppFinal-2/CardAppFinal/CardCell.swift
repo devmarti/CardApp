@@ -9,6 +9,7 @@ class CardCell:UICollectionViewCell{
     @IBOutlet var name: UILabel!
     @IBOutlet var price: UILabel!
     @IBOutlet var imageURL: UIImageView!
+    @IBOutlet var button: UIButton!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -17,8 +18,8 @@ class CardCell:UICollectionViewCell{
     private func renderUI(){
         guard let card = card else { return }
     
-        // name.text = card.name
-        // price.text = "$\(card.price)"
+        name.text = card.name
+        price.text = "$\(card.price)"
         imageURL.image = UIImage(named: card.imageURL)
         
     }

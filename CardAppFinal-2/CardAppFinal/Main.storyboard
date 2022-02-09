@@ -1433,6 +1433,25 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Efara, diosa de la polis" translatesAutoresizingMaskIntoConstraints="NO" id="xIE-Cl-kmb">
                                                     <rect key="frame" x="0.0" y="0.0" width="123" height="182"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-uh-hi6">
+                                                    <rect key="frame" x="8" y="132" width="58" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rG-cq-LLi">
+                                                    <rect key="frame" x="8" y="153" width="58" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQP-hP-m3A">
+                                                    <rect key="frame" x="101" y="12" width="20" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="square.grid.2x2.fill" catalog="system"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="xIE-Cl-kmb" firstAttribute="leading" secondItem="QbL-WL-1nz" secondAttribute="leading" id="0CL-fa-rrn"/>
@@ -1443,7 +1462,10 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="123" height="182"/>
                                         <connections>
+                                            <outlet property="button" destination="yQP-hP-m3A" id="TtE-ug-3ab"/>
                                             <outlet property="imageURL" destination="xIE-Cl-kmb" id="Xm1-eZ-eaS"/>
+                                            <outlet property="name" destination="Eco-uh-hi6" id="SXe-II-xEb"/>
+                                            <outlet property="price" destination="6rG-cq-LLi" id="LS5-Qb-1bO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1486,6 +1508,8 @@
                         <color key="badgeColor" systemColor="systemOrangeColor"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="buttonAjustes" destination="iI3-1D-5KZ" id="dN0-CY-oZo"/>
+                        <outlet property="buttonEditar" destination="tX3-gp-QYu" id="sSZ-LB-JvS"/>
                         <outlet property="collectionView" destination="lXf-YR-Olk" id="Awp-MF-lIw"/>
                     </connections>
                 </viewController>
@@ -1493,10 +1517,10 @@
             </objects>
             <point key="canvasLocation" x="4511.594202898551" y="-575.22321428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Perfil Editar View Controller-->
         <scene sceneID="i7Z-BZ-NXg">
             <objects>
-                <viewController id="eAu-Qc-Kyx" sceneMemberID="viewController">
+                <viewController id="eAu-Qc-Kyx" customClass="PerfilEditarViewController" customModule="CardAppFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVs-gL-2jD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1509,6 +1533,9 @@
                                 <state key="normal" title="Confirmar cambios">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmarCambiosButton:" destination="eAu-Qc-Kyx" eventType="touchUpInside" id="snD-QD-zJD"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f9K-35-Khy">
                                 <rect key="frame" x="139" y="66.5" width="137" height="126.5"/>
@@ -1546,6 +1573,12 @@
                         <viewLayoutGuide key="safeArea" id="FCg-Uz-Pa8"/>
                         <color key="backgroundColor" red="0.1323711276" green="0.15564394000000001" blue="0.21788930889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="contraseña" destination="icS-qE-pXR" id="QaP-pM-QL6"/>
+                        <outlet property="descripcion" destination="SD1-9m-GYa" id="XS5-3U-C2i"/>
+                        <outlet property="nombre" destination="8hS-hG-yWb" id="sIK-FK-Aml"/>
+                        <outlet property="telefono" destination="SmO-cg-8Nf" id="xId-tu-oOe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUJ-zy-aAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1665,7 +1698,7 @@
     </scenes>
     <resources>
         <image name="Efara, diosa de la polis" width="125.5" height="178"/>
-        <image name="Logo" width="243" height="223"/>
+        <image name="Logo" width="242.5" height="222.5"/>
         <image name="Magic-logo" width="220.69999694824219" height="63.034999847412109"/>
         <image name="Pokémon" width="269.468994140625" height="98.814002990722656"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
@@ -1681,6 +1714,7 @@
         <image name="plus.app@-1" width="43" height="43"/>
         <image name="pok" width="720" height="1001"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="text.justify" catalog="system" width="128" height="100"/>
         <image name="􀰚" width="26" height="25"/>
         <systemColor name="linkColor">

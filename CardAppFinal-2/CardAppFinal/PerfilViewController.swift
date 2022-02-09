@@ -57,4 +57,34 @@ class PerfilViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
+    
+    /*@IBAction func buttonEditarTapped(_ sender: Any){
+        
+        if let navCon = storyboard?.instantiateViewController(identifier: "RegisterIdentifier") as? RegisterViewController{
+            
+            
+            navCon.modalPresentationStyle = .fullScreen
+            navCon.modalTransitionStyle = .flipHorizontal
+            
+            present(navCon, animated: true, completion: nil)
+           
+          
+    
+        }
+    }
+    
+    @IBAction func buttonAjustesTapped(_ sender: Any){
+        
+        if let navCon = storyboard?.instantiateViewController(identifier: "RegisterIdentifier") as? RegisterViewController{
+            
+            
+            navCon.modalPresentationStyle = .fullScreen
+            navCon.modalTransitionStyle = .flipHorizontal
+            
+            present(navCon, animated: true, completion: nil)
+           
+          
+    
+        }
+    }*/
 }

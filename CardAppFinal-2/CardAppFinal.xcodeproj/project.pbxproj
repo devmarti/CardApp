@@ -17,6 +17,8 @@
 		3327E8E627B2FCC000CD3AA3 /* ofertas.json in Resources */ = {isa = PBXBuildFile; fileRef = 3327E8E527B2FCC000CD3AA3 /* ofertas.json */; };
 		3347D34427ADABE700DCDE41 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3347D34327ADABE700DCDE41 /* MockData.swift */; };
 		3347D34627ADB19500DCDE41 /* ModeloCarta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3347D34527ADB19500DCDE41 /* ModeloCarta.swift */; };
+		3359C3FD27B41CED00D880A8 /* PerfilEditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359C3FC27B41CED00D880A8 /* PerfilEditarViewController.swift */; };
+		3359C3FF27B421B100D880A8 /* PerfilAjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359C3FE27B421B100D880A8 /* PerfilAjustesViewController.swift */; };
 		33ED2DEC27AAF2BC00F480ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED2DEB27AAF2BC00F480ED /* AppDelegate.swift */; };
 		33ED2DEE27AAF2BC00F480ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED2DED27AAF2BC00F480ED /* SceneDelegate.swift */; };
 		33ED2DF027AAF2BC00F480ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ED2DEF27AAF2BC00F480ED /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		3327E8E527B2FCC000CD3AA3 /* ofertas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ofertas.json; sourceTree = "<group>"; };
 		3347D34327ADABE700DCDE41 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		3347D34527ADB19500DCDE41 /* ModeloCarta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloCarta.swift; sourceTree = "<group>"; };
+		3359C3FC27B41CED00D880A8 /* PerfilEditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilEditarViewController.swift; sourceTree = "<group>"; };
+		3359C3FE27B421B100D880A8 /* PerfilAjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilAjustesViewController.swift; sourceTree = "<group>"; };
 		33ED2DE827AAF2BC00F480ED /* CardAppFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardAppFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33ED2DEB27AAF2BC00F480ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33ED2DED27AAF2BC00F480ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				3347D34327ADABE700DCDE41 /* MockData.swift */,
 				33ED2E0A27AAF30F00F480ED /* LoginViewController.swift */,
 				33ED2E0627AAF30F00F480ED /* PerfilViewController.swift */,
+				3359C3FC27B41CED00D880A8 /* PerfilEditarViewController.swift */,
+				3359C3FE27B421B100D880A8 /* PerfilAjustesViewController.swift */,
 				33ED2E0727AAF30F00F480ED /* RegisterViewController.swift */,
 				33ED2E0827AAF30F00F480ED /* SearchViewController.swift */,
 				33ED2DF627AAF2BD00F480ED /* LaunchScreen.storyboard */,
@@ -203,11 +209,13 @@
 				33ED2E1727AAF31000F480ED /* Carta.swift in Sources */,
 				33ED2DEC27AAF2BC00F480ED /* AppDelegate.swift in Sources */,
 				3347D34627ADB19500DCDE41 /* ModeloCarta.swift in Sources */,
+				3359C3FD27B41CED00D880A8 /* PerfilEditarViewController.swift in Sources */,
 				33ED2E1427AAF31000F480ED /* SearchViewController.swift in Sources */,
 				33ED2E1327AAF31000F480ED /* RegisterViewController.swift in Sources */,
 				330937C327B19049001D9341 /* UpLoadCard1ViewController.swift in Sources */,
 				33ED2E1527AAF31000F480ED /* HomeViewController.swift in Sources */,
 				33ED2DEE27AAF2BC00F480ED /* SceneDelegate.swift in Sources */,
+				3359C3FF27B421B100D880A8 /* PerfilAjustesViewController.swift in Sources */,
 				33ED2E0227AAF2FA00F480ED /* CardCell.swift in Sources */,
 				33ED2E1227AAF31000F480ED /* PerfilViewController.swift in Sources */,
 				3347D34427ADABE700DCDE41 /* MockData.swift in Sources */,
